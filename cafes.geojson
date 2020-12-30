@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",                                                                           
+"features": [
+{ "type": "Feature", "id": 0, "properties": { "NAME": "Windsor Inn", "ADDRESS1": "Carmel Ave 14", "ADDRESS2": "Sderot Ben Gourion 14", "OWNER": "Mr Boutagy",  "IMG": "img/windsor5.jpg", "ICON": "icon/hotel_blu.png", "COMMENT":"Owner owns a licensed gun shop. In 1938 he provided the rebellion with large sums of money and weapons. He contributes to this day in getting all he can. He is publically identifies as an anti-Zionist, and has a relationship with the Criminal Investigation Department of the British Mandate Police (CID)", "WIKI" : "The German Emperor Wilhiem the 2nd stayed there when he visited in 1898."}, "geometry": { "type": "Point", "coordinates": [ 34.9914, 32.8221] } }
+,
+{ "type": "Feature", "id": 1, "properties": { "NAME": "Café at Wadi al Saleeb", "ADDRESS1": "Wadi al Saleeb st 28", "ADDRESS2": "Wadi al Saleeb st 28", "OWNER": "Farid Shaban Al-Hajj Ahmed",  "IMG": "img/wadiSalib28.png", "ICON": "icon/cafe_blu.png", "COMMENT":"The owner of the cafe is Farid Shaban Al-Hajj Ahmed, a Muslim, about 52 years old, from the Al-Hussainiyyen Party. In days of turmoil and unrest, meetings in the Wadi Salib neighborhood are held in the café. No alcoholic drinks are available in this cafe.", "WIKI" : "Houses in Wadi Al Saleeb were expropriated to house jewish immigrents from arab countries after 48. In 1959 a police shooting of a Moroccan Jewish immigrant sparked the <a href='https://en.wikipedia.org/wiki/Wadi_Salib_riots'>'Wadi Salib Riots'</a> against ethnic discrimination. Wadi Salib was demolished in 2018"}, "geometry": { "type": "Point", "coordinates": [ 35.0014, 32.8111] } }
+]
+}
