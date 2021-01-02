@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
+        <style>
+        #map {
+            width: 1240px;
+            height: 670px;
+        }
+        </style>
+        <title></title>
+    </head>
+    <body>
+        <div id="map">
+        </div>
+		<!-- Add jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="js/qgis2web_expressions.js"></script>
+        <script src="js/leaflet.js"></script>
+        <script src="js/leaflet.rotatedMarker.js"></script>
+        <script src="js/leaflet.pattern.js"></script>
+        <script src="js/leaflet-hash.js"></script>
+        <script src="js/Autolinker.min.js"></script>
+        <script src="js/rbush.min.js"></script>
+        <script src="js/labelgun.min.js"></script>
+        <script src="js/labels.js"></script>
+        <script>
+        var map = L.map('map', {
+            zoomControl:true, maxZoom:19, minZoom:14
+        }).fitBounds([[32.78267462559751,34.935388214210136],[32.84138250478617,35.044191140011876]]);
+        var hash = new L.Hash(map);
+        //map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+        var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+        var bounds_group = new L.featureGroup([]);
+        function setBounds() {
+            map.setMaxBounds(map.getBounds());
+        }
+        map.createPane('pane_haifa1942_modified_0');
+        map.getPane('pane_haifa1942_modified_0').style.zIndex = 400;
+        var img_haifa1942_modified_0 = 'data/haifa1942_modified_0.png';
+        var img_bounds_haifa1942_modified_0 = [[32.79343225737873,34.94525654502036],[32.84934452327275,35.02822451626646]];
+        var layer_haifa1942_modified_0 = new L.imageOverlay(img_haifa1942_modified_0,
+                                              img_bounds_haifa1942_modified_0,
+                                              {pane: 'pane_haifa1942_modified_0'});
+        bounds_group.addLayer(layer_haifa1942_modified_0);
+        map.addLayer(layer_haifa1942_modified_0);
+        setBounds();
+        L.ImageOverlay.include({
+            getBounds: function () {
+                return this._bounds;
+            }
+        });
+        
+		$.getJSON("cafes.geojson",function(data){
+		  L.geoJson(data,{
+		pointToLayer: function(feature,latlng){
+		 var thisIcon = L.icon({
+			iconUrl: feature.properties.ICON,
+			iconSize: [20,20]
+		  });
+		  var marker = L.marker(latlng,{icon: thisIcon});
+		  marker.bindPopup('<font size="+2">'+feature.properties.NAME+'</font>'+'<br/>'+ '<b>' +'Owner: ' + '</b>' + feature.properties.OWNER + '<br/><b>'+ '1948 Address: '+ '</b>' + feature.properties.ADDRESS1 + '<br/><b>'+ 'Current Address: '+ '</b>' + feature.properties.ADDRESS2 + '<br/>' + feature.properties.WIKI + '<br/>' + '<img src="'+feature.properties.IMG+'" width="250">'+ '<br/>' + feature.properties.COMMENT);
+		  return marker;
+		}
+		  }).addTo(map);
+		});
+        </script>
+    </body>
+</html>
