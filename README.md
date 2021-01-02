@@ -5,7 +5,7 @@ In this project we use lists made by the Haganah detailing Pubs, Hotels, Cafes, 
 
 Following the Haganah lists we color coded the locations as politically radical (blue), moderate (pink), and apolitical (orange). When considered in conjunction with other factors such as location, religion, and if the establishment served alcohol, interesting insights into the psyche and perceptions of the colonial system emerge.
 
-This is a work in progress, for the most recent map see: https://sebastian-bn-zaydan.github.io/palestine-1948-cafes/leaflet.html
+This is a work in progress, for the most recent map see: https://sebastian-bn-zaydan.github.io/palestine-1948-cafes/index.html
 
 ## TODO
 - Translate and find addresses.  
