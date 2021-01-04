@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
         <style>
         #map {
-            width: 1240px;
-            height: 670px;
+            width: 1440px;
+            height: 1000px;
         }
         </style>
         <title></title>
@@ -32,7 +32,7 @@
         <script src="js/labels.js"></script>
         <script>
         var map = L.map('map', {
-            zoomControl:true, maxZoom:19, minZoom:14
+            zoomControl:true, maxZoom:19, minZoom:12
         }).fitBounds([[32.78267462559751,34.935388214210136],[32.84138250478617,35.044191140011876]], {padding: [100,100]});
         var hash = new L.Hash(map);
         //map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
