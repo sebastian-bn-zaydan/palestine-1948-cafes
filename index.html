@@ -30,9 +30,9 @@
 			}
 
 			#map{
-			   width: 1400px;
-			   height: 1000px;
-			   background-color: #ffffff;
+			   width: 1000px;
+			   height: 600px;
+			   background-color: #f1f6f9;
 			}
 			</style>
 			<!-- Add jQuery -->
@@ -55,7 +55,7 @@
 				iconSize: [20,20]
 			  });
 			  var marker = L.marker(latlng,{icon: thisIcon});
-			  marker.bindPopup('<font size="+2">'+feature.properties.NAME+'</font>'+'<br/>'+ '<b>' +'Owner: ' + '</b>' + feature.properties.OWNER + '<br/><b>'+ '1948 Address: '+ '</b>' + feature.properties.ADDRESS1 + '<br/><b>'+ 'Current Address: '+ '</b>' + feature.properties.ADDRESS2 + '<br/>' + feature.properties.WIKI + '<br/>' + '<img src="'+feature.properties.IMG+'" width="250">'+ '<br/>' + feature.properties.COMMENT);
+			  marker.bindPopup('<font size="+2">'+feature.properties.NAME+'</font>'+'<br/>'+ '<b>' +'Owner: ' + '</b>' + feature.properties.OWNER +'<b><br/>' +'Classification: ' + '</b>' + feature.properties.POL + '<br/><b>'+ '1948 Address: '+ '</b>' + feature.properties.ADDRESS1 + '<br/><b>'+ 'Current Address: '+ '</b>' + feature.properties.ADDRESS2 + '<br/>' + feature.properties.WIKI + '<br/>' + '<img src="'+feature.properties.IMG+'" width="250" onerror="this.style.display=\'none\'"/>'+ '<br/>' + feature.properties.COMMENT);
 			  return marker;
 			}
 			  }).addTo(map);
@@ -220,21 +220,21 @@ In Haifa, bars and cafes served as collective and meeting spots for the youth, p
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <img src="icons/Radical_Alch_trnsprnt.png" width="35%"></img>
+                            <img src="icons/Radical_Alch_trnspnt.png" width="35%"></img>
                             <h3 class="h4 mb-2">Pubs</h3>
                             <p class="text-muted mb-0">Establishments that sold alcoholic drinks as well as none alcholic.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <img src="icons/Radical Htl_trnspnt.png" width="35%"></img>
+                            <img src="icons/Radical_Htl_trnspnt.png" width="35%"></img>
                             <h3 class="h4 mb-2">Hotels</h3>
                             <p class="text-muted mb-0">Lodging for travelers.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 col-md-6 text-center">
                         <div class="mt-5">
-                            <img src="icons/Radical Brthl_trnspnt.png" width="35%"></img>
+                            <img src="icons/Radical_Brthl_trnspnt.png" width="35%"></img>
                             <h3 class="h4 mb-2">Brothels</h3>
                             <p class="text-muted mb-0">Establishments where people pay to engage in sexual activites with sex workers.</p>
                         </div>
@@ -245,7 +245,7 @@ In Haifa, bars and cafes served as collective and meeting spots for the youth, p
         <!-- The Map -->
         <section class="page-section" id="services">
 			<div class="container">
-				<div id="map"></div>
+				<div id="map" style="margin-left: auto; margin-right: auto;"></div>
 			</div>
         </section>
         <!-- Portfolio-->
@@ -262,47 +262,47 @@ In Haifa, bars and cafes served as collective and meeting spots for the youth, p
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/cafe_CongreeLibrary.jpg">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/cafe_CongreeLibrary_thmb.jpg" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Cafe With Gramophone</div>
+                                <div class="project-name">Cafe with Gramophone in Haifa 1945, From the library of congress</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/KingsStreet.jpg">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/KingsStreet_thumb.jpg" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Al Hamra Square</div>
+                                <div class="project-name">From Wikipedia</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/johnyMansour2.jpg">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/johnyMansour2_thmb.jpg" alt="" />
+                            <div class="portfolio-box-caption">
+                                <div class="project-category text-white-50">Cafe In Haifa</div>
+                                <div class="project-name">From 'Contra el Olvido: Memoria Fotográfica de Palestina antes de la Nakba, 1889-1948'</div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
                         <a class="portfolio-box" href="assets/img/portfolio/fullsize/haifa 1942.jpg">
                             <img class="img-fluid" src="assets/img/portfolio/thumbnails/haifa 1942_thmb.jpg" alt="" />
                             <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">HAFIE Map</div>
-                                <div class="project-name">Map of Palastine c. 1943</div>
+                                <div class="project-category text-white-50">1943 Haifa</div>
+                                <div class="project-name">Map of Palastine 1943, From Micha Granit Maps Library, Tel-Aviv University</div>
                             </div>
                         </a>
                     </div>
                     <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/3.jpg">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/3.jpg" alt="" />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/4.jpg">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/4.jpg" alt="" />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/5.jpg">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/5.jpg" alt="" />
-                            <div class="portfolio-box-caption">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-sm-6">
-                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/6.jpg">
-                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/6.jpg" alt="" />
+                        <a class="portfolio-box" href="assets/img/portfolio/fullsize/wadi_salib.jpg">
+                            <img class="img-fluid" src="assets/img/portfolio/thumbnails/wadi_salib_thmb.jpg" alt="" />
                             <div class="portfolio-box-caption p-3">
-                                <div class="project-category text-white-50">Category</div>
-                                <div class="project-name">Project Name</div>
+                                <div class="project-category text-white-50">Image of Wadi-Salib 2017</div>
+                                <div class="project-name">The Palestinian building of Wadi Al-Salib are continuously demolished, photo by Sari Sadiya</div>
                             </div>
                         </a>
                     </div>
@@ -324,12 +324,12 @@ In Haifa, bars and cafes served as collective and meeting spots for the youth, p
                 <div class="row">
                     <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
                         <h4 class="text-center mt-0" style="color:#f4623a">Contributers</h4>
-                        <div>Sari Sadiya, Lillian Young, & Marwa Bakabas</div>
+                        <div>Sari Sadiya, Lillian Young,<br> Marwa Bakabas, Yara Sa'di-Ibraheem</div>
                     </div>
                     <div class="col-lg-4 mr-auto text-center">
                         <h4 class="text-center mt-0" style="color:#f4623a">Email</h4>
                         <!-- Make sure to change the email address in BOTH the anchor text and the link target below!-->
-                        <a class="d-block" href="mailto:contact@yourwebsite.com">HAIFIAMap@website.com</a>
+                        <a class="d-block" href="mailto:sebastianbnzaydan@gmail.com">sebastianbnzaydan@gmail.com</a>
                     </div>
                 </div>
             </div>
