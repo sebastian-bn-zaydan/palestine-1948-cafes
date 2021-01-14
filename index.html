@@ -38,6 +38,13 @@
 			<!-- Add jQuery -->
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 			<script>
+			function isEmpty(str) {
+				if (!str || 0 === str.length) {
+					return ''
+				}
+				return str
+			}
+				
 			$(document).ready(function () {
 			  var map = L.map('map').setView([32.8212207945, 34.9868925889], 14);
 			  var mytile =L.tileLayer('tiles/{z}/{x}/{y}.png', {
@@ -55,7 +62,7 @@
 				iconSize: [20,20]
 			  });
 			  var marker = L.marker(latlng,{icon: thisIcon});
-			  marker.bindPopup('<font size="+2">'+feature.properties.NAME+'</font>'+'<br/>'+ '<b>' +'Owner: ' + '</b>' + feature.properties.OWNER +'<b><br/>' +'Classification: ' + '</b>' + feature.properties.POL + '<br/><b>'+ '1948 Address: '+ '</b>' + feature.properties.ADDRESS1 + '<br/><b>'+ 'Current Address: '+ '</b>' + feature.properties.ADDRESS2 + '<br/>' + feature.properties.WIKI + '<br/>' + '<img src="'+feature.properties.IMG+'" width="250" onerror="this.style.display=\'none\'"/>'+ '<br/>' + feature.properties.COMMENT);
+			  marker.bindPopup('<font size="+2">'+feature.properties.NAME+'</font>'+'<br/>'+ '<b>' +'Owner: ' + '</b>' + feature.properties.OWNER +'<b><br/>' +'Classification: ' + '</b>' + feature.properties.POL + '<br/><b>'+ '1948 Address: '+ '</b>' + feature.properties.ADDRESS1 + '<br/><b>'+ 'Current Address: '+ '</b>' + feature.properties.ADDRESS2 + '<br/>' + isEmpty(feature.properties.WIKI) + '<br/>' + '<img src="'+feature.properties.IMG+'" width="250" onerror="this.style.display=\'none\'"/>'+ '<br/><b>Haganah Comment: </b>' + feature.properties.COMMENT);
 			  return marker;
 			}
 			  }).addTo(map);
