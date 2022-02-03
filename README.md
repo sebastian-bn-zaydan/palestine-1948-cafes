@@ -1,4 +1,4 @@
-# Palestine (1948) Cafés
+# [Palestine (1948) Cafés](https://sebastian-bn-zaydan.github.io/palestine-1948-cafes/index.html)
 The Haganah was the paramilitary arm of the Zionist settler colonial project between 1920 and 1948. Recent FOIA requests have allowed access to formally classified archives containing not only strategic documents, but also ethnographic research useful for studying the pre-Nakba Palestinian society, as well as taxonomies and epistemological systems used by colonial institutions clashing with native populations.
 
 In this project we use lists made by the Haganah detailing Pubs, Hotels, Cafes, and Brothels in 1948 Haifa to map the social life of a community of which over 70% became refugees after the Haganah carried out Operation Scissors (or Operation Passover Cleaning) the 22nd of April 1948.
